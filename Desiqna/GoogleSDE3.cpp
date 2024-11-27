@@ -23,6 +23,8 @@
 
 
 #include <iostream>
+#include <algorithm>
+#include <climits>
 #include <vector>
 using namespace std;
 
@@ -63,6 +65,7 @@ int main(){
         cin>> people[i];
     }
     int res = solve(n,power,people,k);
+    sort(people.begin(), people.end());
     cout<<"Minimum number of bullets required is :" << res << endl;
     return 0;
 }
