@@ -9,7 +9,7 @@ int maximumSumSubarray(vector<int>& arr,int x,int n){
     vector<vector<int>> dp(n,vector<int>(2,0));
     vector<int> k(n,0);
     dp[0][0]= max(0,arr[0]);
-    dp[1][0]= max(0,arr[0]*x);
+    dp[0][1]= max(0,arr[0]*x);
     k[0]=max(0,arr[0]);
     int result = max({k[0], dp[0][0], dp[0][1]});
     for(int i=1;i<n;i++){
