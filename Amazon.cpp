@@ -9,8 +9,8 @@ long getMaxThroughtput(vector<int>& host_throughput){
     int n = host_throughput.size();
     sort(host_throughput.begin(), host_throughput.end());
     int count = 0;
-    int cluster = n/3;
-    for(int i=n-2; i>=0; i-=2){
+    int cluster = n/5;
+    for(int i=n-3; i>=0; i-=4){
         result += host_throughput[i];
         count++;
         if(count == cluster){
